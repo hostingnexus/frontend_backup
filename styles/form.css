@@ -1,0 +1,30 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+form input {
+    margin: 5px;
+    padding: 5px;
+    background-color: #333;
+    border-radius: 5px;
+    color: white;
+}
+
+form input::placeholder {
+    color: #ccc;
+}
+
+form input[type="submit"] {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: darkgreen;
+}

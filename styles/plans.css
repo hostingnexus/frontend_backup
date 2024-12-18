@@ -1,4 +1,4 @@
-.games {
+.plans {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-auto-flow: column;
@@ -7,18 +7,27 @@
     color: red;
 }
 
-.game img {
-    width: 100%;
-    height: auto;
+.plan {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    min-width: 200px;
+    max-width: fit-content;
+    border-radius: 5px;
 }
 
-h3 {
+.plan p {
     text-align: center;
 }
 
-button {
+.plan button {
     background-color: green;
     color: white;
     padding: 10px;
     cursor: pointer;
+}
+
+.plan img {
+    width: 100%;
+    height: auto;
 }

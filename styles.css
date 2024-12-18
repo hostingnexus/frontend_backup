@@ -20,7 +20,7 @@ nav .logo{
     font-family: 'Arial';
 }
 
-a, h2{
+a, h2, h3, p{
     color: #fff;
     text-decoration: none;
 }

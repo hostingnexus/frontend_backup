@@ -17,14 +17,15 @@
         </div>
         <div class="links">
             <a href="../index.html">Home</a>
-            <a href="login.html" class="active">Login</a>
-            <a href="signup.html">Sign up</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html" class="active">Sign up</a>
         </div>
     </nav>
 
-    <form id="login">
+    <form id="signup">
         <input type="email" placeholder="Email" id="email" required>
-        <input type="password" placeholder="Password" id="password" required>
+        <input type="username" placeholder="Username" id="username" required>
+        <input type="password" placeholder="Password" id="password" minlength="8" required>
         <input type="submit" value="Login">
     </form>
 </body>
