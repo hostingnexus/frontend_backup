@@ -4,7 +4,7 @@
 //             </div>
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("http://srv2.byenoob.com:5080/games")
+    fetch("http://localhost:3000/games")
     .then(res => res.json())
     .then(data => {
         for(let i = 0; i < data.length; i++) {

@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const id = urlParams.get("id");
-    fetch("http://srv2.byenoob.com:5080/plans?id=" + id)
+    fetch("http://localhost:3000/plans?id=" + id)
     .then(res => res.json())
     .then(data => {
         for(let i = 0; i < data.length; i++) {

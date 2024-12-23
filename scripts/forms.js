@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 return;
             }
 
-            fetch("http://srv2.byenoob.com:5080/login", {method: "POST", headers: {
+            fetch("http://localhost:3000/login", {method: "POST", headers: {
                 "Content-Type": "application/json"
             }, body: JSON.stringify({email, password})}).then(res => res.json())
             .then(data => {
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 return;
             }
 
-            fetch("http://srv2.byenoob.com:5080/signup", {method: "POST", headers: {
+            fetch("http://localhost:3000/signup", {method: "POST", headers: {
                 "Content-Type": "application/json"
             }, body: JSON.stringify({email, username, password})}).then(res => res.json())
             .then(data => {

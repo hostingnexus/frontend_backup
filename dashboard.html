@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Hosting - Dashboard</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+
+    <script src="scripts/navhandler.js" defer></script>
+    <script src="scripts/dashboard.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h4>Nexus Hosting - Dashboard</h4>
+        </div>
+        <div class="links">
+            <a href="index.html" class="active">Home</a>
+            <a href="auth/login.html" class="authbtn">Login</a>
+            <a href="auth/signup.html" class="authbtn">Sign up</a>
+        </div>
+    </nav>
+
+    <div class="modal" id="eggmodal" style="display: none;">
+        <select id="eggs">
+            <option value="1">Minecraft</option>
+            <option value="2">Rust</option>
+            <option value="3">Garry's Mod</option>
+        </select>
+        <button id="submit">Change egg</button>
+    </div>
+
+    <div class="servers">
+        <div class="server" style="display: none;">
+            <h2>Minecraft</h2>
+            <h3>Memory: 2GB</h3>
+            <h3>CPU: 200%</h3>
+            <h3>Status: Starting</h3>
+            <div class="actions">
+                <button id="view">View</button>
+                <button id="changeegg">Change egg</button>
+                <button id="reinstall">Reinstall</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

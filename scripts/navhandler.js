@@ -11,6 +11,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Add dashboard
 
+            if(window.location.href.includes("dashboard.html")) {
+                const panel = document.createElement("a");
+                panel.href = "https://panel.byenoob.com";
+                panel.innerText = "Panel";
+                links.appendChild(panel);
+                return;
+            }
+
             const dashboard = document.createElement("a");
             dashboard.href = "dashboard.html";
             dashboard.innerText = "Dashboard";
