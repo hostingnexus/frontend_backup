@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const id = urlParams.get("id");
-    fetch("http://localhost:3000/plans?id=" + id)
+    fetch("https://api.hostnexus.cloud/plans?id=" + id)
     .then(res => res.json())
     .then(data => {
         for(let i = 0; i < data.length; i++) {

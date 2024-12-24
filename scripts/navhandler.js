@@ -12,10 +12,24 @@ document.addEventListener("DOMContentLoaded", () => {
             // Add dashboard
 
             if(window.location.href.includes("dashboard.html")) {
+                const dashboard = document.createElement("a");
+                dashboard.href = "dashboard.html";
+                dashboard.innerText = "Dashboard";
+                dashboard.classList.add("active");
+                links.appendChild(dashboard);
+    
                 const panel = document.createElement("a");
                 panel.href = "https://panel.byenoob.com";
                 panel.innerText = "Panel";
                 links.appendChild(panel);
+
+                const logout = document.createElement("a");
+                logout.innerText = "Logout";
+                logout.addEventListener("click", () => {
+                    localStorage.removeItem("token");
+                    window.location.href = "index.html";
+                });
+                links.appendChild(logout);
                 return;
             }
 
@@ -23,6 +37,14 @@ document.addEventListener("DOMContentLoaded", () => {
             dashboard.href = "dashboard.html";
             dashboard.innerText = "Dashboard";
             links.appendChild(dashboard);
+
+            const logout = document.createElement("a");
+            logout.innerText = "Logout";
+            logout.addEventListener("click", () => {
+                localStorage.removeItem("token");
+                window.location.href = "index.html";
+            });
+            links.appendChild(logout);
         }
     }
 });

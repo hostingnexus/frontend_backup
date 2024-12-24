@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if(localStorage.getItem("token") != null) {
         // verify token here, its a MUST to avoid issues
-        fetch("http://localhost:3000/verify", {method: "POST", headers: {
+        fetch("https://api.hostnexus.cloud/verify", {method: "POST", headers: {
             "Content-Type": "application/json"
         }, body: JSON.stringify({token: localStorage.getItem("token")})}).then(res => res.json())
         .then(data => {
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
 
-        fetch("http://localhost:3000/servers", 
+        fetch("https://api.hostnexus.cloud/servers", 
             {method: "GET", headers: {
                 authorization: localStorage.getItem("token")
             }}
