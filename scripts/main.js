@@ -4,6 +4,22 @@
 //             </div>
 
 document.addEventListener("DOMContentLoaded", () => {
+    if(localStorage.getItem("token") != null) {
+        fetch("https://api.hostnexus.cloud/verify", {method: "POST", headers: {
+            "Content-Type": "application/json"
+        }, body: JSON.stringify({token: localStorage.getItem("token")})}).then(res => res.json())
+        .then(data => {
+            if(data.success) {
+                // Ignore
+            } else {
+                localStorage.removeItem("token");
+                window.location.reload();
+                return;
+            }
+        });
+    }
+
+
     fetch("https://api.hostnexus.cloud/games")
     .then(res => res.json())
     .then(data => {
