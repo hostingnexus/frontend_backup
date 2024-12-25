@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
             game.appendChild(price);
             game.appendChild(order);
 
-            game.addEventListener("click", () => {
+            order.addEventListener("click", () => {
                 if(localStorage.getItem("token") != null) {
                     localStorage.setItem("purchasing", JSON.stringify(data[i]));
                     window.location.href = "purchase.html";
