@@ -20,6 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
             const h2 = document.createElement("h2");
             h2.innerText = data[i].name;
 
+            const cores = document.createElement("p");
+            cores.innerText = "Cores: " + data[i].cores;
+
+            const storage = document.createElement("p");
+            storage.innerText = "Storage: " + data[i].storage + "GB";
+
             const price = document.createElement("p");
             price.innerText = parsedPrice + "€";
 
@@ -28,6 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             game.appendChild(h2);
+            game.appendChild(cores);
+            game.appendChild(storage);
             game.appendChild(price);
             game.appendChild(order);
 
