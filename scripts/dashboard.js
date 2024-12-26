@@ -140,6 +140,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if(!created) {
             document.getElementsByClassName("servers")[0].innerText = "(Your servers will appear here)";
+            // white clr wit (prob bad way)
+            document.getElementsByClassName("servers")[0].style.color = "white";
         }
         
 
