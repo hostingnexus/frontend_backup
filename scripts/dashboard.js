@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-
+        let created = false;
         fetch("https://api.hostnexus.cloud/servers", 
             {method: "GET", headers: {
                 authorization: localStorage.getItem("token")
@@ -134,8 +134,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 const server = data[i];
                 
                 createServer(server);
+                created = true;
             }
         })
+
+        if(!created) {
+            document.getElementsByClassName("servers")[0].innerText = "(Your servers will appear here)";
+        }
+        
+
     }
 
     // Detect if they click away from modal
