@@ -40,16 +40,20 @@ document.addEventListener("DOMContentLoaded", function() {
                 return;
             }
 
-            fetch("https://api.hostnexus.cloud/signup", {method: "POST", headers: {
-                "Content-Type": "application/json"
-            }, body: JSON.stringify({email, username, password})}).then(res => res.json())
-            .then(data => {
-                if(data.success) {
-                    alert("Account created successfully");
-                    window.location.href = "login.html";
-                } else {
-                    alert(data.error || data.message);
-                }
+            grecaptcha.ready(function() {
+                grecaptcha.execute('6LdXsqcqAAAAAOlua5cAXM2BNWmeKEi3DfjWi1f8', {action: "submit"}).then(function(token) {
+                    fetch("https://api.hostnexus.cloud/signup", {method: "POST", headers: {
+                        "Content-Type": "application/json"
+                    }, body: JSON.stringify({email, username, password, captchatoken: token})}).then(res => res.json())
+                    .then(data => {
+                        if(data.success) {
+                            alert("Account created successfully");
+                            window.location.href = "login.html";
+                        } else {
+                            alert(data.error || data.message);
+                        }
+                    });
+                });
             });
         });
     }
